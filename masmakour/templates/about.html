@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+{% extends "base.html" %}
+{% block content %}
+{{ content | safe }}
+{% load static %} 
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="{% static 'css/about.css' %}">  
+	</head>
+	<body class="aboBody">
+		<div id="aboDiv">
+
+			<h1 id="aboH1">
+				About
+			</h1>
+
+			<h2 id="aboH2">
+				What is Masmakour? 
+			</h2>
+			
+			<p id="aboP1"> Makour means clean in Armenian, and Mas is just to emphasize how clean it is. Masmakour essentially means "very clean". This website is a blog programmed from scratch by Dikran. It has more then 1000 lines of python, more then 1000 lines of css, a few hundred lines of html and js. It has alot of features and secrets. Explore them and look at new posts on its home page. </p>
+			<p id="aRunon"> This website runs on Python. </p>	
+		</div>
+	</body>
+</html>
+{% endblock %}

@@ -1,0 +1,92 @@
+.specDiv, .specDiv2{
+
+	max-width: 480px;
+	margin: 8px auto;
+
+}
+
+.specH1{
+
+	border-bottom: solid; 
+
+}
+
+/* main btns */ 
+.specBtn{ 
+
+	background-color: #1c1e30;
+	border-color: #9395b8;  
+	color: white;
+	margin-top: 6px;
+
+}
+
+
+.specBtn:hover{
+
+	background-color: #642cdd;
+
+}
+
+/* go back btn */ 
+.specAret{ 
+
+	background-color: #1c1e30;
+	border-color: #9395b8;  
+	color: white;
+	text-decoration: none;
+	padding: 2px;
+	float: right; 
+
+}
+
+
+.specAret:hover{
+
+	background-color: #cc0a0d;	
+
+}
+
+
+/*delete acc btn */ 
+.specDel{ 
+
+	background-color: #1c1e30;
+	border-color: #9395b8;  
+	color: white;
+	text-decoration: none;
+	padding: 2px;
+
+}
+
+
+.specDel:hover{
+
+	background-color: #cc0a0d;	
+
+}
+
+/* text boxex */ 
+
+textarea {	
+
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: block;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px; 
+
+}
+
+input {	
+
+	margin: 8px 0;
+	display: block;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px; 
+
+}
+
+

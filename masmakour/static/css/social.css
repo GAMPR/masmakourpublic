@@ -1,0 +1,26 @@
+#socDiv{
+
+	margin: auto;
+	max-width: 480px;
+
+}
+
+#socH1{
+
+	border-bottom: solid;
+
+}
+
+/*A */ 
+.socA{
+
+	text-decoration: none;
+	color: black; 
+}
+
+
+.socA:hover{
+
+	color: #642cdd;
+
+}

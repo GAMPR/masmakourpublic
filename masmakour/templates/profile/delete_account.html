@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+{% extends "base.html" %} 
+{% block content %} 
+{{ content | safe }}
+{% load static %} 
+{% load crispy_forms_tags %} 
+
+<html>
+	<head>
+		<meta charset="utf-8"> 
+		<link rel="stylesheet" href="{% static 'css/accs/spec.css' %}"> 
+	</head>
+	<body class="specBod"> 
+		<div class="specDiv">
+			<h1 class="specH1">Delete account.</h1>
+			<p class="specP"> Warning, account deletion cannot be reversed.</p>
+			<p class="specP"> No refunds for premium accounts. </p>
+			<a class="specDel" href="{% url 'delete_account_confirm' %}">Delete account</a>
+			<a class="specAret" href="{% url 'edit_profile' username=request.user %}"> Back </a>		
+		</div>
+	</body>
+
+</html>
+
+{% endblock content %} 
+

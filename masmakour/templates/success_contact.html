@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+{% extends "base.html" %} 
+{% block content %} 
+{{ content | safe }}
+{% load static %} 
+{% load crispy_forms_tags %} 
+
+<html>
+	<head>
+		<meta charset="utf-8"> 
+		<link rel="stylesheet" href="{% static 'css/accs/checked.css' %}"> 
+	</head>
+	<body class="ckBod"> 
+		<div class="specDiv">
+			<h1 class="chkH1"> Thank you for your inquiry. </h1>
+			<p>Your message was succesfully submitted.</p>	
+			<p><a class="chkA" href="{% url 'home' %}">Go Home</a></p>
+		</div>
+	</body>
+
+</html>
+
+{% endblock content %} 
+
+

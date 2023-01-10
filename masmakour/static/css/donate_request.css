@@ -1,0 +1,39 @@
+#donDiv{
+
+	margin: auto;
+	max-width: 480px; 
+
+} 
+
+#donH1{
+
+	border-bottom: solid;
+
+} 
+
+#donBtn{
+
+	background-color: #1c1e30; 
+	text-decoration: none; 
+	color: white; 
+	border-color: #1c1e30; 
+	border-radius: 6px;
+	margin-bottom: 6px; 
+	min-width: 80px;
+	min-height: 50px; 
+
+
+} 
+
+#donBtn:hover{
+
+	background-color: #09e510;	
+
+}
+
+#donPet{
+
+	width: 80%;
+	height: 80%; 
+
+} 

@@ -1,0 +1,58 @@
+#logMaindiv{
+
+	margin: auto;
+	max-width: 480px;
+
+}
+
+#logH1{
+
+	border-bottom: solid; 
+
+}
+
+/* form */ 
+
+.textinput {
+
+
+	margin: 8px 0;
+	display: block;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px; 
+
+}
+
+/*login btn */ 
+
+#logBtn{ 
+
+	background-color: #1c1e30;
+	border-color: #9395b8;  
+	color: white; 
+
+}
+
+
+#logBtn:hover{
+
+	background-color: #642cdd;
+
+}
+
+/* Create accoutn, reset password links */
+
+
+.logA{
+	
+	text-decoration: none; 
+	color: #642cdd;
+
+}
+
+.logA:hover{
+	
+	color: #9395b8;	
+
+}

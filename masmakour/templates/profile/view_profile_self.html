@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+{% extends "base.html" %} 
+{% block content %} 
+{{ content | safe }}
+{% load static %} 
+<html> 
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="{% static "css/accs/viewprofile.css"%}"> 
+	</head>
+	<body id="vpBod">
+		<div id="vpId"> 
+			<ul id="vpUl">
+				{% if request.user.is_premium == True %} 
+				<li class="vpLitop"> 
+					<h1 id="vpH1p"> {{request.user.username}} </h1>
+				</li>
+				{% else %} 
+				<li class="vpLitop"> 
+					<h1 id="vpH1r"> {{request.user.username}} </h1>
+				</li>
+				{% endif %} 	
+				<li class="vpLitop"> 
+					<h2 id="vpH2"> About me </h2>
+				</li>
+				<li class="vpLi">
+					<p> {{request.user.about}} </p>
+				</li>
+				<li class="vpLi">
+					<p> Email: {{request.user.email}} </p>
+				</li>
+				<li class="vpLi">
+					{% if request.user.is_premium == True %} 
+					<p id="vpTr"> Your account is a premium member. </p>
+					{% else %} 
+					<p id="vpEl"> Your account is not a premium member. </p>
+					{% endif %} 	
+				</li>
+				<li class="vpLi">
+					<p> Date joined: {{request.user.date_joined}}. </p>
+				</li>
+				<li class="vpLi">	
+					<a class="vpA" href="{% url 'edit_profile' username=request.user %}"> Edit profile settings </a>					
+				</li>	
+				<li class="vpLi">	
+					<a class="vpA" href="{% url 'home' %}">Go Home</a>				
+				</li>	
+			</ul>
+		</div>
+	</body> 
+</html>
+
+
+{% endblock content %} 

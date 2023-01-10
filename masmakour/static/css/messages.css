@@ -1,0 +1,18 @@
+.mesUl{
+
+	list-style-type: none; 
+} 
+
+.error{
+
+	color: red;
+	font-size: 20px; 
+
+} 
+
+.success{ 
+
+	color: #642cdd;
+	font-size: 20px;
+	
+} 

@@ -1,0 +1,79 @@
+/* centering blog divs and page button */
+
+.iMaindiv{
+
+	margin: auto;
+	max-width: 480px; 
+
+}
+
+/* page buttons */ 
+
+#iPagenavcontainer{
+
+	margin: auto;
+	max-width: 480px;
+
+} 
+
+.iListpage{ 
+
+	display: inline;
+
+}
+
+.iPageatxt{
+
+	background-color: #1c1e30; 
+	text-decoration: none; 
+	color: white; 
+
+}
+
+.iPageatxt:hover{
+
+	background-color: #642cdd;
+
+}
+
+/* main page posts and buttons */ 
+
+.iPost{
+
+	border-style: solid;
+	border-color: #1c1e30; 
+	border-radius: 4px; 
+
+}
+
+.iMaindiv{
+
+	padding: 10px; 
+
+} 
+
+.iPostbuttonread{
+
+	background-color: #1c1e30; 
+	text-decoration: none; 
+	color: white; 
+
+}
+
+.iPostbuttonread:hover{
+
+	background-color: #642cdd;
+
+}
+
+.iAuthor{
+
+	text-decoration: none;
+
+}
+
+.iAuthor:hover{
+
+	color: #9395b8; 
+
+}

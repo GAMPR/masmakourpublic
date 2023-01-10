@@ -1,0 +1,58 @@
+#regDiv{
+
+	margin: auto; 
+	max-width: 480px; 
+
+}
+
+#regH1{
+
+	border-bottom: solid;
+
+} 
+
+/* form */ 
+
+input {
+
+	margin: 8px 0;
+	display: block;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px; 
+
+}
+
+/* button */
+#regBtn{ 
+
+	background-color: #1c1e30;
+	border-color: #9395b8;  
+	color: white;
+	margin-top: 12px; 
+
+}
+
+
+#regBtn:hover{
+
+	background-color: #642cdd;
+
+}
+
+
+/* login link */
+
+
+#regA{
+	
+	text-decoration: none; 
+	color: #642cdd;
+
+}
+
+#regA:hover{
+	
+	color: #9395b8;	
+
+}

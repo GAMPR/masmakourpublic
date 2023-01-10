@@ -1,0 +1,10 @@
+{% autoescape off %}
+
+Hi {{user.username}}
+
+Please use link below to verify your accounts 
+
+https://{{domain}}{% url 'activate' uidb64=uid token=token %} 
+
+{% endautoescape %} 
+

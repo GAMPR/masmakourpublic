@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+{% extends "base.html" %}
+{% block content %}
+{{ content | safe }} 
+{% load crispy_forms_tags %}
+{% load static %}
+
+<!-- login -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="{% static 'css/accs/login.css'%}"> 
+	</head>
+	<body id="logBod">
+		<div id="logMaindiv">
+			<h1 id="logH1"> Login </h1>
+			<form id="logForm" method="POST">
+				{% csrf_token %}
+				{{ login_form|crispy }} 
+				<button id="logBtn" type="submit">Login</button>
+			</form>	
+			<p class="logP"> Don't have an account?<a class="logA" href="{% url 'register' %}"> Create an account.</a></p>
+			<p class="logP"> Forgot password? <a class="logA" href="{% url 'reset_password' %}"> Reset password.</a></p>	
+		</div>
+	</body>
+</html>
+
+
+{% endblock %} 

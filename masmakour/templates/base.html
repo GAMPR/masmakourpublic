@@ -1,0 +1,90 @@
+{% load static %} 
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"> 
+		<title>Masmakour</title>
+		<link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}">	
+		<link rel="stylesheet" href="{% static 'css/base.css' %}">	
+	</head>
+
+	<body>
+		<!-- Navigation -->
+
+		<div id="bMaindiv">
+			<nav id="bNavbar">
+				<ul id="bNavbarul">
+					{% if user.is_authenticated %} 
+					<a class="bListnavtxt" href="{% url 'logout' %}">	
+						<li class="bListnav">
+							Logout
+						</li>
+					</a>
+					<a class="bListnavtxt" href="{% url 'view_profile' username=request.user %}">	
+						<li class="bListnav">
+							My Profile
+						</li>
+					</a>
+					{% else %} 
+					<a class="bListnavtxt" href="{% url 'register' %}">	
+						<li class="bListnav">
+							Register
+						</li>
+					</a>
+					<a class="bListnavtxt" href="{% url 'login' %}">	
+						<li class="bListnav"> 
+							Login
+						</li>	
+					</a> 
+					{% endif %}
+					<a class="bListnavtxt" href="{% url 'donate_request' %}">	
+						<li class="bListnav">
+							Gas	
+						</li>
+					</a>
+					<a class="bListnavtxt" href="{% url 'social' %}">	
+						<li class="bListnav">
+							Social
+						</li>
+					</a> 
+					<a class="bListnavtxt" href="{% url 'contact' %}">	
+						<li class="bListnav">
+							Contact
+						</li>
+					</a> 
+					<a class="bListnavtxt" href="{% url 'categories' %}">	
+						<li class="bListnav">
+							Categories
+						</li>
+					</a> 	
+
+					<a class="bListnavtxt" href="{% url 'about' %}">	
+						<li class="bListnav">
+							About
+						</li>
+					</a>
+				</ul>
+				<div id = "bLeftdivheadmas">
+					<a id="bMasmain" href="{% url 'home' %}">
+						<img src="{% static 'img/mature.png' %}" alt="Masmakour" width="40" height="60">
+					</a>	
+					<a href="{% url 'home' %}" id="bMainheadmas">
+						asmakour
+					</a>
+					<p id="bGangsta"> Fortune Favors the Bold </p>  	
+				</div>
+			</nav>
+		</div>
+		<div id="bsDiv">
+			{% include 'messages.html' %}
+		</div>
+		{% block content %}
+		<!-- Content Goes here (index) -->
+		{% endblock content %}
+		<!-- Footer -->	
+		<footer id="bFoot">
+			<p id="bCopyright">Copyright &copy; Masmakour 2022</p>
+		</footer>
+	</body>
+</html>	

@@ -1,0 +1,100 @@
+#bMaindiv{
+	
+	background-color: #1c1e30;
+	border-radius: 8px;
+	padding-bottom: 3px;  
+}
+
+.bListnavtxt{
+
+	text-decoration: none;
+	font-size: 18px; 
+	color: white; 
+
+}
+
+.bListnavtxt:hover{
+
+	color: #1c1e30; 
+
+}
+
+.bListnav{
+
+	display: inline;
+	float: right;
+	margin: 10px; 
+	padding: 14px 6px;  
+
+} 
+
+.bListnav:hover{
+
+	background-color: #9395b8;
+	border-radius: 6px; 
+ 
+
+}
+
+/* Left header start */ 
+
+#bMasmain{
+
+	float: left;
+
+}
+
+#bHthreemas{
+	
+	padding: 10px 10px;
+
+}
+
+#bMainheadmas{
+
+	color: white;
+	text-decoration: none; 
+
+}
+
+#bMainheadmas:hover{
+	
+	color: #642cdd; 	
+
+}
+
+
+#bGangsta{
+
+	color: white;
+	text-decoration: none; 
+
+}
+
+/* Left header end */
+/* Footer begin */
+#bFoot{
+
+	margin: auto;
+	background-color: #1c1e30;
+	border-radius: 6px;
+	max-width: 270px; 
+	padding: 1px;
+
+
+}
+
+#bCopyright{
+	
+	color: white;
+
+}
+	
+/*error div */ 
+
+#bsDiv{ 
+
+	margin: auto;
+	max-width: 480px;
+
+} 

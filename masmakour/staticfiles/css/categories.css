@@ -1,0 +1,96 @@
+#catDiv{
+
+	margin: auto;
+	max-width: 720px; 
+
+}
+
+#catH1{
+
+	border-bottom: solid;
+
+}
+
+#catNavdiv {
+
+	overflow: hidden;
+	background-color: #1c1e30;  
+	border-radius: 8px; 
+	margin: 10px; 
+
+}
+
+.catDropa { 
+
+	float: left;
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	padding: 0px 10px;
+	padding-bottom: 4px; 
+	text-decoration: none;
+
+}
+
+/*make additional categories float left*/ 
+.catDropdiv {
+
+	float: left;
+	overflow: hidden;
+
+}
+
+/* Dropdown button */
+.catDropdiv .catDropbtn {
+
+	font-size: 16px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 18px 16px;
+	background-color: inherit;
+	font-family: inherit; /* Important for vertical align on mobile phones */
+	margin: 0; /* Important for vertical align on mobile phones */
+
+}
+
+/* background color on hover */
+#catNavdiv a:hover, #catDropdiv:hover .catDropbtn {
+
+	background-color: #9395b8;
+	border-radius: 6px; 
+	color: #1c1e30;  
+
+}
+
+/* Dropdown content (hidden by default) */
+.catDropcntdiv {
+
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0 4px 6px black;
+	z-index: 1;
+
+}
+
+/* Links inside the catDropdiv */
+.catDropcntdiv a {
+
+	float: none;
+	color: #1c1e30;   
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+
+}
+
+/* Show the catDropdiv menu on hover */
+.catDropdiv:hover .catDropcntdiv {
+
+	display: block;
+
+} 
+

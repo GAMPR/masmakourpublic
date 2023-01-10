@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+{% extends "base.html" %}
+{% block content %}
+{{ content | safe }}
+{% load static %} 
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="{% static 'css/categories_detail.css' %}"/> 
+	</head>
+	<body id="catdetBody">
+		<div id="catdetDiv">
+			<h1 id="catdetH1"> {{category.name}} </h1> 
+			<p id="catdetP1"> Press whichever post you wish to access: </p>
+			<ul id="catdetUl">
+				{% for post in category.post_set.all %}	
+				<li class="catdetList"> 
+					<a class="catdetLtxt" href="{% url 'post_detail' post.slug %}">{{ post.title }}</a>  
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</body>
+</html>
+{% endblock %}

@@ -1,0 +1,226 @@
+.pdPosth1{
+
+	border-bottom: solid;
+}
+
+.pdLinedet{
+
+	border-bottom: solid;
+
+}
+
+.pdCmtcntxt{
+
+	border-bottom: solid;
+
+} 
+
+.pdMastdiv{
+
+	margin: auto;
+	max-width: 480px; 
+
+}
+
+/*cc0a0d */
+/* comment buttons */
+
+.pdCombtn{
+
+	background-color: #1c1e30; 
+	text-decoration: none; 
+	color: white; 
+	border-color: #9395b8; 
+	border-radius: 2px;
+	margin-bottom: 6px; 
+
+} 
+
+.pdCombtn:hover{
+
+	background-color: #642cdd;	
+
+}
+
+/*trash buttons */
+
+.pdTrshbtn{
+
+	background-color: #1c1e30; 
+	text-decoration: none; 
+	color: white; 
+	border-color: #9395b8; 
+	border-radius: 2px; 
+	margin-bottom: 10px; 
+
+} 
+
+.pdTrshbtn:hover{
+
+	background-color: #cc0a0d;
+
+}
+
+/*trying to make comment, delete, reply boxes collapsable */
+
+/*hide comments only start */ 
+.pdComdiv{
+
+	display: none; 
+
+}
+/*comments only end */ 
+/*hide replies only start */ 
+
+.pdRepdiv{
+
+	display: none; 
+
+}
+/*hide replies only end */ 
+/* leave a comment button style start */ 
+.pdCombopen{
+	
+	min-width: 150px;
+	min-height: 40px; 
+	background-color: #1c1e30; 
+	text-decoration: none; 
+	color: white; 
+	border-color: #9395b8; 
+	border-radius: 2px; 
+	margin-bottom: 14px; 
+
+}
+
+.pdCombopen:hover{
+
+	background-color: #642cdd;	
+
+}
+
+.pdCombclose{
+	
+	background-color: #1c1e30; 
+	min-width: 35px;
+	min-height: 25px;
+	color: white;
+	float: right; 
+	margin-right: 20px; 	
+
+}
+
+.pdCombclose:hover{
+
+	background-color: #cc0a0d;	
+
+}
+
+/* end */
+/*reply button */ 
+.pdRepbopen{
+
+	background-color: #1c1e30; 
+	min-width: 50px;
+	min-height: 30px;
+	color: white;
+	border-color: #9395b8;
+
+} 
+
+.pdRepbopen:hover{ 
+
+	background-color: #642cdd; 
+
+} 
+
+.pdRepbclose{
+
+	background-color: #1c1e30; 
+	min-width: 35px;
+	min-height: 25px;
+	color: white;
+	float: right;
+	margin-right: 20px; 
+
+} 
+
+.pdRepbclose:hover{ 
+
+	background-color: #cc0a0d;
+
+} 
+
+
+/*attempting to style comment master div for indent and good looks */
+
+.pdComasterdiv{
+
+	border-style: solid;
+	border-color: black; 
+
+}
+
+.pdRepviewdiv{
+
+	margin-left: 30px;
+	border-left: solid;
+	padding-left: 14px; 
+
+} 
+
+.pdComusrdiv{
+
+	border-style: solid; 
+	color: white;
+	background-color: #1c1e30;  
+	padding: 4px; 
+
+}
+
+.pdRepcombdy{
+
+	padding: 24px; 
+
+}
+
+/*text form box */ 
+textarea {
+
+	min-width: 330px;  
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: block;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px; 
+	margin-left: 28px; 
+
+}
+
+/*remove old timey url look from ahref link username */
+
+.pdUsername{
+
+	text-decoration: none;
+	color: white; 
+
+}
+
+.pdUsername:hover{
+
+	color: #9395b8; 
+
+}
+
+
+.pdAuthor{
+
+	text-decoration: none;
+
+}
+
+.pdAuthor:hover{
+
+	color: #9395b8; 
+
+}

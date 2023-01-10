@@ -1,0 +1,50 @@
+#edSec{
+
+	margin: 6px auto;
+	max-width: 480px;
+	border-style: solid; 
+
+}
+
+#edH2{
+
+	border-bottom: solid; 
+
+}
+
+#edUl{ 
+
+	list-style-type: none;
+
+} 
+
+.edLitop{
+
+	margin: 6px;
+
+}
+
+.edLi{
+
+	margin: 6px;
+
+}
+
+
+.edA{
+
+	margin: auto;
+	text-decoration: none; 
+	background-color: #1c1e30;
+	border-color: #9395b8;  
+	color: white; 	
+
+} 
+
+.edA:hover{
+
+	background-color: #9395b8;
+
+}
+
+

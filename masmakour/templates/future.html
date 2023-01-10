@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+{% extends "base.html" %}
+{% block content %}
+{{ content | safe }}
+{% load static %}
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="{% static 'css/future.css' %}">
+	</head>
+	<body class="futBody">
+		<div id="futDiv">		
+			<h1 id="futH1">
+				Future 	
+			</h1>
+			<p class="futP">
+			Future features list: three.js animated garage page/minigame. Better mobile styling. Random quotes on left instead of always "a Gangsta's paradise", using javascript. 
+			</p>
+			<p class="futP">
+			Custom colored username for premium account, ads, no ads for premium account. Email helper with @masmakour.com domain instead of using google. Front end post panel for admins. Search bar?  
+			</p>
+			<p class="futP">
+			Considering: Save post button. Saved posts page. 
+			</p>
+			<p class="futP">
+			Minor stuff: Index hit count, delete comment confirm box, more structure template folder and views.	
+			</p>
+			<p class="futP">
+			Social page: possibly add other social medias and my shops. EBay, facebook, kijiji. Twitter, linkedin. 
+			</p>		
+		</div>
+	</body>
+</html>
+{% endblock %}

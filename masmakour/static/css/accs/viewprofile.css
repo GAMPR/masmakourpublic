@@ -1,0 +1,63 @@
+#vpId{
+
+	/* margin this way its centered but theres gap top and bottom */ 
+	margin: 10px auto;
+	max-width: 480px; 
+	border-style: solid;
+
+}
+
+#vpUl{
+
+	list-style-type: none;
+
+}
+
+.vpLi{
+
+	margin: 6px; 
+
+}
+
+#vpH1p{
+
+	border-bottom: solid; 
+	color: gold;
+
+}
+
+#vpH1r{
+
+	border-bottom: solid; 
+
+}
+
+#vpH2{
+
+	border-bottom: solid; 
+
+} 
+
+#vpTr{
+
+	color: #642cdd; 		
+
+} 
+
+.vpA{
+
+	margin: auto;
+	text-decoration: none; 
+	background-color: #1c1e30;
+	border-color: #9395b8;  
+	color: white; 	
+
+} 
+
+.vpA:hover{
+
+	background-color: #9395b8;
+
+}
+
+

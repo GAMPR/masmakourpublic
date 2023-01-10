@@ -1,0 +1,52 @@
+.specDiv{
+	
+	margin: auto;
+	max-width: 480px; 
+
+}
+
+.chkH1{
+	
+	border-bottom: solid; 
+
+} 
+
+
+.chkA{ 
+
+	background-color: #1c1e30;
+	border-color: #9395b8;  
+	color: white;
+	text-decoration: none;
+	padding: 2px;
+
+
+}
+
+
+.chkA:hover{
+
+	background-color: #642cdd;
+
+}
+
+#chkOnly{
+
+	width: 85%;
+	height: 85%;
+
+}
+
+#chkDoncan{
+
+	width: 80%;
+	height: 80%;
+
+}
+
+#chkWin{
+
+	width: 95%;
+	height: 95%;
+
+}

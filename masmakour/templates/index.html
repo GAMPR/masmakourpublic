@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+{% extends "base.html" %}
+{% block content %}
+{% load static %} 
+{{ content | safe }} 
+<html>
+	<head>
+		<link rel="stylesheet" href="{% static 'css/index.css' %}">		
+	</head>
+	<body id="iBody">	
+		<div class="iMaindiv">
+			{% for post in post_list %}
+			<div class="iPost">
+				<div class="iPostcontainer">
+					<p><a class="iPostbuttonread" href="{% url 'post_detail' post.slug %}">{{ post.title | safe}}</a></p> 
+					<p class="iPostparas"><a class="iAuthor" href="{% url 'view_profile' post.author %}">{{post.author|safe}} </a> | {{post.category|safe}}</p> 
+					<p class="iPostparas" >{{post.created_on}} </p>
+					<p class="iPostparas">{{post.content|slice:":200" | safe}} ... </p>
+					<a class="iPostbuttonread" href="{% url 'post_detail' post.slug %}">Read more &rarr;</a> 
+				</div>
+			</div>
+			{% endfor %}
+		</div>	
+		{% if is_paginated %}
+		<nav id="iPagenavcontainer">
+			<ul class="iScrollbuttons">
+				{% if page_obj.has_previous %}
+				<li class="iListpage"> 
+					<a class="iPageatxt" href="?page={{page_obj.previous_page_number}}">&laquo; Prev</a> 
+				</li>
+				{% endif %} 
+				{% if page_obj.has_next %}
+				<li class="iListpage">
+					<a class="iPageatxt" href="?page={{page_obj.next_page_number}}">Next &raquo;</a>
+				</li>
+				{% endif %}	
+			</ul>
+			<ul class="iScrollbuttons">
+				{% if page_obj.has_previous %}	
+				<li class="iListpage">
+					<a class="iPageatxt" href="?page=1">&laquo;&laquo; First</a> 
+				</li> 
+				{% endif %}
+				{% if page_obj.has_next %}
+				<li class="iListpage">
+					<a class="iPageatxt" href="?page={{page_obj.paginator.num_pages}}">Last &raquo;&raquo;</a>
+				</li>
+			</ul>
+			{% endif %}	
+			</ul>
+		</nav>
+		</div>
+	</body>
+	{% endif %}
+
+</html>
+{% endblock %}

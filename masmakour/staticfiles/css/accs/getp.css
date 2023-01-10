@@ -1,0 +1,56 @@
+#getpDiv{
+
+	max-width: 480px; 
+	margin: auto;
+
+} 
+
+#getpH1{
+
+	border-bottom: solid;
+
+}
+
+#getpH2{
+
+	border-bottom: solid;
+
+} 
+
+#getpUl{
+
+	list-style-type: none; 
+
+} 
+
+#getpBtn{ 
+
+	background-color: #1c1e30;
+	border-color: #9395b8;  
+	color: white; 
+
+}
+
+#getpBtn:hover{
+
+	background-color: #642cdd;
+
+}
+
+.getAret{ 
+
+	background-color: #1c1e30;
+	border-color: #9395b8;  
+	color: white;
+	text-decoration: none;
+	padding: 2px;
+	float: right; 
+
+}
+
+
+.getAret:hover{
+
+	background-color: #cc0a0d;	
+
+}

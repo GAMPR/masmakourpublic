@@ -1,0 +1,359 @@
+#masmain{
+
+	color: black;
+	text-decoration: none;
+	float: left; 
+
+}
+
+#masmain:hover{
+
+	color: white;
+
+}
+
+#replydisplay{
+
+	box-shadow: 0 4px 6px black;
+	border-radius: 8px;
+	max-width: 180px; 
+
+}
+
+.homie{
+
+	text-decoration:none;
+	color: black; 
+	width: 250px; 
+
+}
+
+.homie:hover{
+
+	color: #642cdd;
+
+}
+
+#sheading{
+
+	max-width: 245px; 
+
+}
+
+.listnav{
+
+	display: inline;
+	padding: 6px; 
+	float: right; 
+	border: none;
+	margin: 8px; 
+
+}
+
+.txtlistnav:hover{
+
+	color: white; 
+
+}
+
+.txtlistnav{
+
+	font-family: "Roboto";
+	font-size: 23px; 
+	text-decoration: none;
+	color: black; 
+}
+
+#blogmaincontainer{
+
+	margin: auto; 
+	max-width: 800px; 
+
+}
+
+#blogcontainersegment{
+
+	max-height: 500px;
+	max-width: 400px; 
+	margin: auto; 
+
+}
+
+#blogmaincontainer{
+
+	border: none;
+
+}
+
+#sidebar{
+
+	float: right; 
+	margin: auto; 
+	position:relative; 
+	bottom:160px;
+	border: solid; 
+	height: auto; 
+	width: 18%; 
+	border-radius: 6px; 
+	background-color: #9395b8; 
+
+}
+
+#buttonread{
+
+	text-decoration: none; 
+	background-color: #ea0079;
+	color: black;
+	border: solid;
+	border-color: black; 
+	border-width: 2px;
+	border-radius: 9px; 
+
+}
+
+#buttonread:hover{
+
+	color:white; 
+
+}
+
+#scrollbutton{
+
+	text-decoration: none; 
+	background-color: #ea0079;
+	color: black;
+	border: solid;
+	border-color: black; 
+	border-width: 2px;
+	border-radius: 9px; 
+	max-width:150px;
+	margin: auto; 
+	position: relative; 
+	top: 19px;
+	font-family: "Roboto";
+
+}
+
+.page-link{
+
+	text-decoration: none; 
+
+}
+
+.page-link:hover{
+
+	color: white;
+
+}
+
+body{
+	font-family: "Roboto", sans-serif;
+	font-size: 17px;
+	background-color: #fdfdfd;
+}
+
+.btn-danger{
+
+	text-decoration: none; 
+	color: black;
+	background-color: #ea0079;
+	border: solid; 
+	border-radius: 7px; 
+	border-color: black;
+	font-family: "Robot"; 
+
+}
+
+.btn-danger:hover{
+
+	color: white;
+
+}
+
+#com1{
+	/*margin: auto; */
+	box-shadow: 0 4px 6px black;
+	border-radius: 8px;
+	max-width: 180px; 
+}
+
+#id_name{
+
+	border-radius: 18px; 
+	background-color: #f1f1f1;
+	border: solid;
+	border-width: 1px; 
+	border-color: black; 
+
+}
+
+#id_email{
+
+	border-radius: 18px; 
+	background-color: #f1f1f1;
+	border: solid;
+	border-width: 1px; 
+	border-color: black; 
+
+
+}
+
+#id_body{
+
+	background-color: #f1f1f1;
+	border: solid;
+	border-width: 1px; 
+	border-color: black; 
+
+
+}
+
+#combutton{
+
+	text-decoration: none; 
+	color: black;
+	background-color: #ea0079;
+	border: solid; 
+	border-radius: 7px; 
+	border-color: black; 
+
+}
+
+#combutton:hover{
+
+	color:gray;
+
+}
+
+.masthead{
+
+	background: #9395b8;
+	height: auto;
+	padding-bottom: 15px;
+	box-shadow: 0 16px 48px #E3E7EB;
+	padding-top: 10px; 
+	border-radius: 7px; 
+
+}
+
+
+.card{
+	box-shadow: 0 4px 6px black;
+	border-radius: 8px; 
+}
+
+.card-body{
+	
+	font-family: "Roboto"; 
+	height: 33%;
+	width: 33%; 
+	margin: auto; 
+	overflow-wrap: break-word;	
+
+}
+
+#mainNav{
+	
+	font-family: "Roboto"; 
+
+}
+
+
+#post{
+
+	overflow-wrap: break-word;
+	font-family: "Roboto"; 
+
+}
+
+#navcat {
+
+  overflow: hidden;
+  background-color: #9395b8;
+  font-family: "Roboto";
+  border-radius: 8px; 
+
+}
+
+#navcat a {
+
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+#dropdown {
+
+  float: left;
+  overflow: hidden;
+
+}
+
+/* Dropdown button */
+#dropdown #dropit {
+
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+
+}
+
+/* Add a red background color to navbar links on hover */
+#navcat a:hover, #dropdown:hover #dropit {
+
+  background-color: #642cdd;
+
+}
+
+/* Dropdown content (hidden by default) */
+#dropcat-content {
+
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 4px 6px black;
+  z-index: 1;
+
+}
+
+/* Links inside the dropdown */
+#dropcat-content a {
+
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+
+}
+
+/* Add a grey background color to dropdown links on hover */
+#dropcat-content a:hover {
+
+  background-color: #ddd;
+
+}
+
+/* Show the dropdown menu on hover */
+#dropdown:hover #dropcat-content {
+
+  display: block;
+
+} 
+
+.pagesi{
+
+	font-family: "Roboto";
+
+} 

@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+{% extends "base.html" %} 
+{% block content %} 
+{{ content | safe }}
+{% load static %} 
+{% load crispy_forms_tags %} 
+
+<html>
+	<head>
+		<meta charset="utf-8"> 
+		<link rel="stylesheet" href="{% static 'css/accs/checked.css' %}"> 
+	</head>
+	<body class="ckBod"> 
+		<div class="specDiv">
+			<h1 class="chkH1"> Subscription succesful. Welcome to my OnlyFans. </h1>
+			<p><img id="chkOnly" src="{% static 'img/onlyfans.gif' %}"></p>
+			{% if user.is_authenticated %} 
+			<p><a class="chkA" href="{% url 'view_profile' username=request.user %}"> My Profile </a></p>
+			{% endif %} 
+			<p><a class="chkA" href="{% url 'home' %}">Go Home</a></p>
+		</div>
+	</body>
+
+</html>
+
+{% endblock content %} 
+
+

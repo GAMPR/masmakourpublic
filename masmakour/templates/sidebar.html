@@ -1,0 +1,19 @@
+<!DOCTYPE html> 
+<html>
+	<meta charset="utf-8"> 
+	{% block sidebar %}
+	<body class="pagesi">
+		<div id="sidebar">
+			<div>
+				<h5 class="card-header">About Us</h5>
+				<div class="card-body">
+					<p class="card-text"> Find out more. </p> 
+					<a href="{% url 'about' %}"
+					   class="btn btn-danger">Lets go!</a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<!-- Footer -->
+	{% endblock sidebar %}	
+</html> 

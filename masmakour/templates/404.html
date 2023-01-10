@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+{% extends "base.html" %} 
+{% block content %} 
+{{ content | safe }}
+{% load static %} 
+
+<html>
+	<head>
+		<meta charset="utf-8"> 
+		<link rel="stylesheet" href="{% static 'css/accs/checked.css' %}"> 
+	</head>
+	<body class="ckBod"> 
+		<div class="specDiv">
+			<h1 class="chkH1"> 404 Page not found. </h1>
+			<p><img id="chkDoncan" src="{% static 'img/404.gif' %}"></p>
+			<p><a class="chkA" href="{% url 'home' %}">Go Home</a></p>
+		</div>
+	</body>
+
+</html>
+
+{% endblock content %} 
+
+

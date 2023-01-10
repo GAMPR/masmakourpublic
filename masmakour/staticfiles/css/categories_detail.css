@@ -1,0 +1,42 @@
+#catdetDiv{
+	
+	margin: auto;
+	max-width: 480px; 
+
+}
+
+#catdetH1{
+
+	border-bottom: solid; 
+
+}
+
+/* remove txt decore from list */ 
+
+.catdetLtxt{
+
+	text-decoration: none;
+	color: black; 
+}
+
+/*hover color for txt */ 
+.catdetLtxt:hover{
+
+	color: #642cdd;
+
+}
+
+/* padding distance between li */ 
+
+.catdetList{ 
+
+	padding: 4px; 
+
+}
+
+/*remove bullets from list */ 
+#catdetUl{ 
+
+	list-style-type: none; 
+
+} 

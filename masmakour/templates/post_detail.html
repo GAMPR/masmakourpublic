@@ -1,0 +1,155 @@
+<!DOCTYPE html> 
+{% extends "base.html" %}
+{% block content %}
+{{ content | safe }}
+{% load static %}
+{% load hitcount_tags %} 
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="{% static 'css/post_detail.css' %}">	
+	</head> 
+	<body class="pdBody">
+		<div class="pdMastdiv">
+
+			<div class="pdPostdiv">
+				<h1 class="pdPosth1">{% block title %} {{post.title }} {% endblock title %}</h1>
+				<p class="pdLinedet"> <a class="pdAuthor" href="{% url 'view_profile' post.author %}">{{ post.author }} </a> | {{post.category}} | {{ post.created_on }}</p>
+				<p class="pdPostbody">{{ post.content | safe }}</p>
+			</div>
+
+
+			<!-- comments -->
+			<div class="pdCmtcntdiv">	
+				<h2 class="pdCmtcntxt"> 
+					{{commentcount.count}} comments	
+				</h2>
+			</div>
+
+			<!--<button class="pdOpencom" onclick="openCForm()">Comment</button>--> 
+
+			<div class="pdCombox">
+				{% if user.is_authenticated %}	
+				<button class="pdCombopen" onclick="openCform()"> Leave a comment </button>
+				<div class="pdComdiv" id="pdComdivid">
+					<button class="pdCombclose" onclick="closeCform()"><!--closebox-->X</button>
+					<form id="pdComform" method="post">
+						{{ comment_form.as_p }} 
+						{% csrf_token %}
+						<button class="pdCombtn" type="submit">Submit</button>
+					</form>
+				</div>
+				{% else %}
+				<p class="pdLgdoutcmt"> Login or register to leave a comment. </p>
+				{% endif %}
+			</div>
+
+			{% for comment in comments %}
+			<div class="pdComasterdiv">
+
+				<div class="pdComusrdiv">
+					<p class="pdComusrdet">
+					<a class="pdUsername" href="{% url 'view_profile' comment.user %}"> {{comment.user}} </a>>
+						{{comment.created_on}}	
+					</p>
+				</div>
+
+				<div class="pdRepcombdy">	
+					{{comment.body | linebreaks }}
+				</div> 
+
+				<div class="pdComdtrshdiv">
+					{% if user.is_authenticated and comment.user == user %}	
+					<form class="pdRepform" action = "{% url 'delete_comment' post.slug %}" method = "POST">
+						{% csrf_token %}
+						<input type="hidden" name="comment_id" value="{{ comment.id }}"/>
+						<button class="pdTrshbtn">&#128465;</button>
+					</form>	
+					{% endif %} 
+				</div>
+
+				<div class="pdRepviewdiv"> 
+					{% for reply in comment.replies.all %}
+
+					<div class="pdComusrdiv">
+						<p class="pdComusrdet"> 
+						<a class="pdUsername" href="{% url 'view_profile' comment.user %}"> {{ reply.user }} </a>
+						{{ reply.created_on }} 
+						</p>
+					</div> 
+
+					<div class="pdRepcombdy">
+						{{ reply.body }} 
+					</div> 
+
+					{% if user.is_authenticated and reply.user == user %}
+
+					<form class="pRepform" action = "{% url 'delete_comment' post.slug %}" method = "POST">
+						{% csrf_token %}
+						<input type="hidden" name="comment_id" value="{{ reply.id }}"/>
+						<button class="pdTrshbtn">&#128465;</button>	
+					</form>	
+
+					{% endif %} 
+					{% endfor %} 	
+				</div>
+
+
+				<div class="pdHugediv">	
+					{% if user.is_authenticated %}
+					<button class="pdRepbopen" value="{{forloop.counter}}" onclick="openRform(this.value)"><!--reply-->&#8618;</button>
+					<div class="pdRepdiv" id="pdRepdivid{{forloop.counter}}"> 
+						<button class="pdRepbclose" value="{{forloop.counter}}" onclick="closeRform(this.value)"><!--closebox-->X</button>
+						<form class="pdRepform" action="." method="post">
+							{{ comment_form.as_p }}
+							{% csrf_token %}
+							<!-- Hidden input for parent comment.id -->
+							<input type="hidden" name="parent_id" value="{{ comment.id }}">
+							<button class="pdCombtn" type="submit" value="Reply">Submit</button>
+						</form>
+					</div> 
+				</div>
+
+				{% else %}
+				<!-- show nothing is not logged in --> 					
+				{% endif %} 
+			</div>
+			{% endfor %}
+
+
+		</div>
+
+		<script>
+			console.log('check'); 
+
+			function openCform() {
+							document.getElementById("pdComdivid").style.display = "block";
+						}
+
+			function closeCform() {
+							document.getElementById("pdComdivid").style.display = "none";
+						}
+			function openRform(val) {
+							//let == limited to block while var has global scope 
+							let text1 = "pdRepdivid"; 
+							//console.log(text1); 
+							let text2 = val;
+							//console.log(text2); 
+							let fulltext = text1.concat(text2); 
+							//console.log(fulltext); 
+							document.getElementById(fulltext).style.display = "block";
+						}
+
+			function closeRform(val) {
+							let text1 = "pdRepdivid"; 
+							let text2 = val;
+							let fulltext = text1.concat(text2); 
+							document.getElementById(fulltext).style.display = "none";
+						}	
+
+		</script>	
+	</body>
+
+	{% endblock content %}
+</html> 

@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+{% extends "base.html" %}
+{% block content %}
+{{ content | safe }}
+{% load static %} 
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="{% static 'css/accs/regsuccess.css' %}"> 
+	</head>
+	<body id="regsucBod">
+		<div id="regsucDiv"> 
+			<h1 class="regsucH">
+				Registration succesful.  	
+			</h1>
+			<h2  class="regsucH">
+				Please verify your email to be able to login.  	
+			</h2>
+			<img id="regsucImg" src="{% static 'img/email.gif' %}"> 
+		</div> 
+	</body>
+</html>
+{% endblock %}

@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+{% extends "base.html" %}
+{% block content %}
+{{ content | safe }}
+{% load static %} 
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="{% static 'css/social.css' %}"> 
+	</head>
+	<body id="socBod">
+		<div id="socDiv">
+			<h1 id="socH1"> Social </h1>
+			<p class="socP"><a class="socA" href="https://www.instagram.com/masmakour/">Instagram Main</a></p>
+			<p class="socP"><a class="socA" href="https://www.instagram.com/massmakour/">Instagram Science</a></p>
+			<p class="socP"><a class="socA" href="https://www.instagram.com/memesmakour/">Instagram Memes</a></p>
+			<p class="socP"><a class="socA" href="https://www.instagram.com/dikranm/">Instagram Personal </a></p>
+			<p class="socP"><a class="socA" href="https://www.tiktok.com/@masmakour?lang=en">TikTok</a></p>
+			<p class="socP"><a class="socA" href="https://www.youtube.com/channel/UCT2u9gctQplRTokZo7nkO4w">Youtube</a></p>
+			<p class="socP"><a class="socA" href="https://github.com/GAMPR">Github</a></p>
+		</div> 
+	</body>
+</html>
+{% endblock %}
